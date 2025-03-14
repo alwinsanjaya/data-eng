@@ -1,0 +1,1 @@
+select * from bronze_data.dim_category
