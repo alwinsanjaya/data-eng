@@ -75,7 +75,7 @@ def trigger_sync(**context):
     print(f"Sending request to: {url}")
     print(f"Payload: {payload}")
     
-    """Mendapatkan headers dengan autentikasi untuk API Airbyte"""
+    """Getting headers with authentication for the Airbyte API"""
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
@@ -163,7 +163,7 @@ check_status_task = PythonOperator(
     dag=dag,
 )
 
-# Task untuk menjalankan perintah DBT dalam virtual environment
+# Task to run DBT commands in a virtual environment
 dbt_run = BashOperator(
     task_id='dbt_run',
     bash_command="""
